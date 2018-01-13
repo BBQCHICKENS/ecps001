@@ -29,7 +29,7 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
-  <filter>
+ <!-- <filter>
     <filter-name>sitemesh</filter-name>
     <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
   </filter>
@@ -44,7 +44,7 @@
     <url-pattern>*.jsp</url-pattern>
     <dispatcher>REQUEST</dispatcher>
     <dispatcher>FORWARD</dispatcher>
-  </filter-mapping>
+  </filter-mapping>-->
 
   <filter>
     <filter-name>SpringCharacterEncodingFilter</filter-name>
