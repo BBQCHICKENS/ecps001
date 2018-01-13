@@ -1,4 +1,4 @@
-package com.lbj.model;
+package com.lbj.ecps.model;
 
 /**
  * Created by gqq on 2018/1/13.

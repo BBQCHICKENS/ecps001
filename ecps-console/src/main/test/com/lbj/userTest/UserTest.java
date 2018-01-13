@@ -1,6 +1,6 @@
 package com.lbj.userTest;
 
-import com.lbj.model.User;
+import com.lbj.ecps.model.User;
 import org.junit.Test;
 
 /**
