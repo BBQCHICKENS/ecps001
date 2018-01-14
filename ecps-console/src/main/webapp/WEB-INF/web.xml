@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-  <!--<listener>
+  <listener>
     <listener-class>net.sf.navigator.menu.MenuContextListener</listener-class>
-  </listener>-->
+  </listener>
 
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -29,7 +29,7 @@
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
 
- <!-- <filter>
+  <filter>
     <filter-name>sitemesh</filter-name>
     <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
   </filter>
@@ -44,7 +44,7 @@
     <url-pattern>*.jsp</url-pattern>
     <dispatcher>REQUEST</dispatcher>
     <dispatcher>FORWARD</dispatcher>
-  </filter-mapping>-->
+  </filter-mapping>
 
   <filter>
     <filter-name>SpringCharacterEncodingFilter</filter-name>
