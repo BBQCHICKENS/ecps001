@@ -36,7 +36,7 @@
     <axis2.version>1.5.4</axis2.version>
     <jdbc.groupId>com.oracle</jdbc.groupId>
     <jdbc.artifactId>ojdbc14</jdbc.artifactId>
-    <jdbc.version>10.2.0.2.0</jdbc.version>
+    <jdbc.version>10.2.0.1.0</jdbc.version>
     <jdbc.driverClassName>oracle.jdbc.OracleDriver</jdbc.driverClassName>
     <quartz.version>2.2.1</quartz.version>                          <!-- Quartz的版本 -->
   </properties>
@@ -47,7 +47,7 @@
         <groupId>${jdbc.groupId}</groupId>
         <artifactId>${jdbc.artifactId}</artifactId>
         <version>${jdbc.version}</version>
-        <type>pom</type>
+        <!--<type>pom</type>-->
       </dependency>
       <dependency>
         <groupId>org.jmock</groupId>

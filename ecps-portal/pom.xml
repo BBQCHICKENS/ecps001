@@ -19,7 +19,7 @@
         <dependency>
             <groupId>${jdbc.groupId}</groupId>
             <artifactId>${jdbc.artifactId}</artifactId>
-            <type>pom</type>
+            <!--<type>pom</type>-->
         </dependency>
         <dependency>
             <groupId>org.jmock</groupId>

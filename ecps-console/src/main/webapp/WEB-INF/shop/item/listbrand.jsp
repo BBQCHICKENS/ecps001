@@ -4,55 +4,6 @@
 <title>品牌管理_商品管理</title>
 <meta name="heading" content="<fmt:message key='mainMenu.heading'/>"/>
 <meta name="brand" content="brandName"/>
-<script type="text/javascript">
-	var flag=null;
-    function singleDel(brandId){
-    	//tipShow('#confirmDiv');
-    	if(confirm("你确认要删除该品牌吗?")){
-    		window.location.href = "${path}/brand/deleteBrand.do?brandId="+brandId;
-    	}
-    }
-    function batchDel(){
-        if(!isChecked()){
-            alert("请选择记录");
-            return;
-        }
-        tipShow('#confirmDiv');
-        flag="batchDel";
-/*         if(confirm("确定删除这些记录")){
-        	$("#form1").attr("action","${base}/item/brand/batchDelBrandById.do");
-	       	$("#form1").submit();
-        } */
-
-    }
-
-    
-
-    
-
-    $(document).ready(function(){
-		$("#all").click(function(){
-	     	if($("#all").attr("checked")){
-	        	$("input[name='ids']").attr("checked", true);
-	        }else{
-	        	$("input[name='ids']").attr("checked", false);
-	        }
-	    });
-		$("#checkall").click(function(){
-			$("input[name='ids']").attr("checked", true);
-			$("#all").attr("checked",true)
-		});
-		$("#cancelall").click(function(value){
-			$("input[name='ids']").attr("checked", false);
-			$("#all").attr("checked",false)
-		});
-		
-
-		<c:if test="${message!=null }">
-			alert("<c:out value='${message }'/>");
-		</c:if>
-	});
-</script>
 </head>
 <body id="main">
 <div class="frameL"><div class="menu icon">

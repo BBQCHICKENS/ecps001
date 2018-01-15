@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+"-//mybatis.org//DTD MyBatis Generator Configuration 
+1.0//EN"
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"
+>
+<generatorConfiguration>
+	<!-- 制定mysql的驱动包的路径 千万别放中文路径下 -->
+	<classPathEntry location="H:/ojdbc14-10.2.0.1.0.jar" />
+	<!-- 配置数据源和生成的代码所存放的位置 -->
+	<context id="context1">
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:orcl" userId="ecps001"
+			password="123456" />
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+           NUMERIC 类型解析为java.math.BigDecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false"/>
+		</javaTypeResolver>
+		<!-- targetProject:生成PO类的位置 -->
+		<javaModelGenerator targetPackage="com.lbj.ecps.model"
+							targetProject="src/main/java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false"/>
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true"/>
+		</javaModelGenerator>
+		<!-- targetProject:mapper映射文件生成的位置
+           如果maven工程只是单独的一个工程，targetProject="src/main/java"
+           若果maven工程是分模块的工程，targetProject="所属模块的名称"，例如：
+           targetProject="ecps-manager-mapper"，下同-->
+		<sqlMapGenerator targetPackage="com.lbj.sqlMapper"
+						 targetProject="src/main/resources">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false"/>
+		</sqlMapGenerator>
+		<!-- targetPackage：mapper接口生成的位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+							 targetPackage="com.lbj.ecps.dao"
+							 targetProject="src/main/java">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false"/>
+		</javaClientGenerator>
+		
+		<table schema="" tableName="eb_item" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+	</context>
+</generatorConfiguration>
