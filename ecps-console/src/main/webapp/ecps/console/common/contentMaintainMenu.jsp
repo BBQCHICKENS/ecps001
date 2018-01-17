@@ -1,4 +1,4 @@
-<%@ page language=taglibs.jsp"%>
+<%@ page language="taglibs.jsp"%>
 <head>
 <meta name="menu" content="contentMaintain"/>
 </head>

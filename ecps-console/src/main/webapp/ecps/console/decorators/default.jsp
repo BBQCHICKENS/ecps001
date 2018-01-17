@@ -286,7 +286,6 @@ function onblurtxt(){
 	<div class="f"></div>
 </div>
 <div id="staticLoadDiv" style="display:none">
-
 	<img src="<c:url value='/ecps/console/res/imgs/loading.gif'/>" />发布中... ...
 </div>
 

@@ -51,7 +51,7 @@
     insert into EB_BRAND (BRAND_ID, BRAND_NAME, BRAND_DESC, 
       IMGS, WEBSITE, BRAND_SORT
       )
-    values (#{brandId,jdbcType=DECIMAL}, #{brandName,jdbcType=VARCHAR}, #{brandDesc,jdbcType=VARCHAR}, 
+    values (SEQBRANDID.NEXTVAL, #{brandName,jdbcType=VARCHAR}, #{brandDesc,jdbcType=VARCHAR},
       #{imgs,jdbcType=VARCHAR}, #{website,jdbcType=VARCHAR}, #{brandSort,jdbcType=DECIMAL}
       )
   </insert>
@@ -144,5 +144,14 @@
     where BRAND_ID = #{brandId,jdbcType=DECIMAL}
   </update>
 
+  <select id="selectAllBrands" resultMap="BaseResultMap">
+       SELECT * FROM  EB_BRAND
+  </select>
 
+  <select id="validateBrandName" parameterType="java.lang.String" resultType="java.lang.Integer">
+     SELECT  COUNT(*) FROM EB_BRAND
+     <where>
+       BRAND_NAME = #{brandName,jdbcType=VARCHAR}
+     </where>
+  </select>
 </mapper>
